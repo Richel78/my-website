@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insights & Articles | Richel Tshering La</title>
+
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #111827;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+}
+
+.section {
+  padding: 60px;
+}
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+}
+
+/* ARTICLE LIST */
+
+.article {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.article-title {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.article-title:hover {
+  background: #f9fafb;
+}
+
+.article-content {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: none;
+  line-height: 1.7;
+  color: #444;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+  <div><strong>Richel Tshering La</strong></div>
+
+  <div>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/articles">Insights & Articles</a>
+  </div>
+</nav>
+
+
+<!-- PAGE HEADER -->
+
+<div class="section">
+
+  <div class="page-header">
+    <h1>Insights & Articles</h1>
+
+    <p>
+      Perspectives on microfinance, banking strategy, credit risk, financial inclusion,
+      and emerging trends in NBFCs, fintech, and development finance.
+    </p>
+  </div>
+
+
+  <!-- ARTICLE 1 -->
+
+  <div class="article">
+
+    <div class="article-title" onclick="toggleArticle(this)">
+      CGSMFI 2.0: A Timely Boost for the Microfinance Sector
+    </div>
+
+    <div class="article-content">
+      <p>
+      At a time when liquidity and portfolio quality remain key concerns in the microfinance industry, the Government’s CGSMFI 2.0 (Credit Guarantee Scheme for Microfinance Institutions) provides an important policy push to sustain funding to the sector
+      </p>
+
+      <p>
+      The scheme enables banks and other Member Lending Institutions (MLIs) to lend to NBFC-MFIs and other eligible MFIs with a government-backed credit guarantee, thereby reducing the risk of exposure and encouraging continued flow of wholesale funding.
+      </p>
+
+      <p>
+      A key feature of the scheme is the guarantee coverage linked to the size of the MFI. The government provides 80% guarantee cover for small MFIs, 75% for medium MFIs, and 70% for large NBFC-MFIs/MFIs on the amount in default. The scheme carries a guarantee fee of 0.50% per annum, charged on the sanctioned amount in the first year and on the outstanding amount thereafter.
+      </p>
+
+      <p>
+      To ensure that the benefit flows through the value chain, the interest rate on loans extended by MLIs to MFIs is capped at EBLR or MCLR + 2% per annum. In turn, MFIs must cap their lending rate to borrowers at least 1% below their average lending rate of the previous six months, ensuring that the scheme directly benefits end borrowers
+      </p>
+
+      <p>
+      The loans under the scheme are meant for existing or new small borrowers falling within the RBI’s regulatory definition of microfinance, reinforcing the sector’s core objective of financial inclusion.
+      </p>
+
+      <p>
+      The scheme will remain valid until 30 June 2026 or until guarantees worth ₹20,000 crore are issued, whichever occurs earlier.
+      By sharing credit risk and improving funding access, CGSMFI 2.0 is expected to restore lender confidence, support liquidity in the microfinance sector, and ensure continued credit flow to low-income households and micro-entrepreneurs across India.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- ARTICLE 2 -->
+
+  <div class="article">
+
+    <div class="article-title" onclick="toggleArticle(this)">
+      Static Pool Analysis
+    </div>
+
+    <div class="article-content">
+      <p>
+      One of the most underused tools in lending: Static Pool Analysis. Many teams track overall portfolio numbers.
+      But that only tells you where you are—not where the problem started.
+      Static pool analysis changes that.
+      </p>
+
+      <p>
+      It helps you:
+      Track performance by disbursement cohort
+      Identify when asset quality starts deteriorating
+      Compare vintages across time
+      Understand the impact of policy or pricing changes
+      Without it, you’re managing risk at an aggregate level.
+      With it, you’re managing risk at its source.
+      If you’re not using static pools, you’re likely reacting late.
+      </p>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<script>
+
+function toggleArticle(element) {
+
+  let content = element.nextElementSibling;
+
+  if (content.style.display === "block") {
+      content.style.display = "none";
+  } else {
+      content.style.display = "block";
+  }
+
+}
+
+</script>
+
+
+</body>
+</html>
